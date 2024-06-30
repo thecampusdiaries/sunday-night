@@ -1,0 +1,40 @@
+<% layout("/layouts/boilerplate") %>
+
+  <body>
+    <div class="row">
+      <div class="col-8 offset-2">
+        <br><br>
+        <h3>Create a new Post</h3>
+        <form method="post" action="/explore" novalidate class=" form-group needs-validation"
+          enctype="multipart/form-data">
+
+          <div class="mb-3">
+            <label for="title" class="form-label">Title: </label>
+            <input class="form-control" name="post[title]" placeholder="Add name of your event" type="text" required>
+            <div class="valid-feedback">Name looks good!</div>
+            <div class="invalid-feedback">Name should be valid</div>
+          </div>
+
+          <br><br>
+
+          <div class="mb-3">
+            <label for="caption" class="form-label">Caption : </label>
+            <textarea name="post[caption]" class="form-control"></textarea>
+            <div class="invalid-feedback">Caption should be valid</div>
+          </div>
+
+          <br><br>
+
+          <div class="mb-3">
+            <label for="image" class="form-label">Image File : </label>
+            <input class="form-control" name="post[image]" type="file" required>
+          </div>
+
+          <br><br>
+
+          <button class="add-btn btn btn-dark mb-3">Add</button>
+
+        </form>
+      </div>
+    </div>
+  </body>
